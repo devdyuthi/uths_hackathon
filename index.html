@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Future of Sustainability</title>
+
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Font imports */
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+
+      /* Color palette */
+      :root {
+        --primary-green: #3ec300;
+        --dark-green: #0d2818;
+        --muted-teal: #729ea1;
+        --golden-yellow: #e0a458;
+        --coral: #e26d5a;
+      }
+
+      /* Body styling */
+      body {
+        background-color: #f4f9f0;
+        font-family: "Raleway", sans-serif; /* Elegant, modern font for the body */
+        color: var(--dark-green);
+        padding: 40px;
+        text-align: center;
+        background-image: url("images/bg.png"); /* Replace with your image URL */
+        background-size: cover; /* Ensure the image covers the entire page */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Prevent repeating the image */
+      }
+
+      /* Header styling */
+      .title {
+        color: #fff;
+        background: linear-gradient(
+          45deg,
+          var(--primary-green),
+          var(--coral)
+        ); /* Gradient with primary green and coral */
+        font-family: "Dancing Script", cursive; /* Fancy script font for title */
+        padding: 20px;
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        max-width: 900px;
+        margin: auto;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Fancy text shadow */
+        transform: translateY(-50%);
+        animation: moveSideToSide 3s ease-in-out infinite;
+      }
+
+      /* Keyframes for side to side movement */
+      @keyframes moveSideToSide {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(25px); /* Move 200px to the right */
+        }
+        100% {
+          transform: translateX(0); /* Move back to the original position */
+        }
+      }
+
+      /* Section Styling */
+      .section {
+        margin-top: 40px;
+        padding: 20px;
+      }
+
+      .sus_title {
+        font-size: 34px;
+        font-family: "Playfair Display", serif; /* Luxurious font for section titles */
+        color: #700f00;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .sus_info {
+        font-size: 22px;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: auto;
+        font-family: "Raleway", sans-serif;
+        font-weight: 400;
+        color: #0d2818;
+      }
+
+      /* Image Styling */
+      .sus_img,
+      .map {
+        width: 50%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin: 20px 0;
+        transition: transform 0.5s ease; /* Smooth zoom transition */
+      }
+
+      /* Buttons Styling */
+      .container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 15px 25px;
+        font-size: 18px;
+        background-color: var(--primary-green);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow on button */
+      }
+
+      button:hover {
+        background-color: var(--coral);
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Added button shadow on hover */
+      }
+
+      /* Map Info Box */
+      .map_info {
+        background: var(--muted-teal);
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+        max-width: 800px;
+        margin: auto;
+        font-family: "Raleway", sans-serif;
+      }
+
+      /* Zoom-in effect class */
+      .zoom-in {
+        transform: scale(1.5); /* Zoom to 150% */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">The Future of Sustainability</h1>
+
+    <div class="section" id="1">
+      <h2 class="sus_title">Why Does This Matter?</h2>
+      <p class="sus_info">
+        Manhattan's future relies on sustainable development to combat climate
+        change, improve quality of life, and preserve resources for future
+        generations. As a global center, Manhattan's environmental policies
+        influence economies worldwide.
+      </p>
+      <img src="images/pollution.JPG" class="sus_img" alt="Pollution Image" />
+    </div>
+
+    <div class="section" id="2">
+      <h2 class="sus_title">A Visual Look at Sustainability</h2>
+      <img src="images/map_draw.jpeg" class="map" alt="Map of Manhattan" />
+      <div class="container">
+        <button onclick="changeText1()">Urban Flooding</button>
+        <button onclick="changeText2()">Urban Wildlife</button>
+        <button onclick="changeText3()">Urban Heat Island</button>
+        <button onclick="changeText4()">Pollution</button>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="map_info">
+        <p id="map_info">Click the buttons to learn more</p>
+        <img src="" width="" height="" id="info_img" />
+      </div>
+    </div>
+
+    <script>
+      function changeText1() {
+        document.getElementById("map_info").innerHTML =
+          "Manhattan’s dense infrastructure, paved surfaces, and outdated drainage systems lead to water buildup due to heavy rainfall. The overwhelming drainage systems lead to flash floods. What can we do to reduce inundation? Adding more greenspaces can soak more water and decrease runoff. → No major flooding. We can also apply strict zoning regulations like improving stormwater management by expanding sewer capacity.";
+        zoomInMap();
+        document.querySelector(".map").src = "images/flood.JPEG";
+        setTimeout(function () {
+          document.querySelector(".map").src = "images/map_draw.jpeg";
+        }, 2000);
+      }
+
+      function changeText2() {
+        document.getElementById("map_info").innerHTML =
+          "Manhattan includes a lot of wildlife animals that have adapted to the city environment (raccoons, pigeons, rats, etc.). Some species thrive but others struggle due to habitat loss. Urban sustainability is a challenge, creating more issues like biodiversity loss because cities are replacing the natural habitats, pushing species toward extinction. Additionally, there is a spread of disease as more interaction with urban animals raises health risks. There are also invasive species issues as no native species outcompete native wildlife. Also, some animals damage property and cause safety concerns";
+        zoomInMap();
+        document.querySelector(".map").src = "images/wild.JPG";
+        setTimeout(function () {
+          document.querySelector(".map").src = "images/map_draw.jpeg";
+        }, 2000);
+      }
+
+      function changeText3() {
+        document.getElementById("map_info").innerHTML =
+          "Manhattan is a city that is significantly hotter than surrounding rural areas due to human activities and infrastructure. concrete, asphalt, and buildings absorb and retain heat. This is a challenge because increasing energy consumption creates air contamination, which equals higher electricity demand. There are also high health risks due to high temperatures, leading to heat strokes and health issues. Additionally, as heat intensifies, smog and pollution increase, creating poor air quality. Lastly, more evaporation and water use for cooling leads to water shortages.";
+        zoomInMap();
+        document.querySelector(".map").src = "images/uhi.JPG";
+        setTimeout(function () {
+          document.querySelector(".map").src = "images/map_draw.jpeg";
+        }, 2000);
+      }
+
+      function changeText4() {
+        document.getElementById("map_info").innerHTML =
+          "Manhattan produces a lot of pollution from factories, vehicles, construction, and waste. This contaminates the air, water, and land. Air pollution comes from the emissions from vehicles. Water pollution comes from the runoff of contaminants in rainwater. There is a possibility that this can seep into the water we use every day.";
+        zoomInMap();
+        document.querySelector(".map").src = "images/poll.JPG";
+        setTimeout(function () {
+          document.querySelector(".map").src = "images/map_draw.jpeg";
+        }, 2000);
+      }
+
+      // Function to apply the zoom-in effect
+      function zoomInMap() {
+        const map = document.querySelector(".map");
+        map.classList.add("zoom-in");
+
+        // Remove the zoom-in effect after 5 seconds (optional, can be adjusted)
+        setTimeout(function () {
+          map.classList.remove("zoom-in");
+        }, 1000); // Remove zoom effect after 5 seconds
+      }
+    </script>
+  </body>
+</html>
